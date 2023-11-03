@@ -2,11 +2,7 @@
 const uploadFile = ref<HTMLInputElement | null>(null);
 
 const selectedFile = async () => {
-  if (!uploadFile.value) {
-    console.error('No file selected');
-    return;
-  }
-  const files = uploadFile.value.files;
+  const files = uploadFile.value?.files;
   if (!files) {
     console.error('No files selected');
     return;
