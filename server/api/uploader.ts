@@ -2,8 +2,6 @@ import { writeFile } from 'fs/promises';
 
 export default defineEventHandler(async event => {
   const files = await readMultipartFormData(event);
-  console.log(files);
-  
   if (!files || !files.length) {
     throw createError({
       statusCode: 400,
