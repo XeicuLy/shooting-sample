@@ -1,75 +1,19 @@
-# Nuxt 3 Minimal Starter
+# このリポジトリについて
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+このリポジトリは、画像データを API に送る機能のサンプルです。
 
-## Setup
+## 概要
 
-Make sure to install the dependencies:
+画像を「撮影」もしくは「選択」することが可能で、その画像を用いて外部 API にリクエストすることを想定して作成しました。
 
-```bash
-# npm
-npm install
+外部 API は基本的にサーバーサイド側で叩くことになると思うので、一度 Nuxt で作成した API に画像データを渡し、画像を復元しています。
 
-# pnpm
-pnpm install
+今回は外部 API を叩く前段階までをイメージして作成しました。
 
-# yarn
-yarn install
+## 想定される挙動
 
-# bun
-bun install
-```
+「写真を撮影・選択する」部分を押下します。そうすると、
 
-## Development Server
+iPhone・Android では、写真を撮影するか、アルバムから選択するかを選べるポップアップのようなものが表示されます。
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+PC では、ファイル選択画面が表示されます。
