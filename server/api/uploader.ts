@@ -7,7 +7,7 @@ export default defineEventHandler(async event => {
       statusCode: 400,
       statusMessage: 'image not found',
     });
-  } else if (files[0].name === 'image') {
+  } else if (files[0].name === 'image' && files[0].filename) {
     const { filename, data } = files[0];
     const filePath = `public/${filename}`;
     await writeFile(filePath, data);
