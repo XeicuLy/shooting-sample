@@ -24,7 +24,7 @@ const selectedFile = async () => {
 </script>
 <template>
   <div class="input-area">
-    <label for="upload">写真を撮影する</label>
+    <label for="upload">写真を撮影・選択する</label>
     <input
       ref="uploadFile"
       type="file"
